@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "My App",
+    "slug": "my-app",
+    "version": "1.0.0",
+    "scheme": "unimelb-huddle",
+    "android": {
+      "package": "com.anonymous.myapp"
+    }
+  }
+}
