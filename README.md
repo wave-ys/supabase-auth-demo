@@ -5,3 +5,5 @@
 3. Change `supabase.js.example` to `supabase.js` and fill with your own Supabase credentials.
 4. Run `pnpm install` to install dependencies.
 5. Run `expo run:android` to run the app on Android emulator.
+
+![recording](./recording.gif)
