@@ -69,8 +69,6 @@ const MainScreen = () => {
         await supabase.auth.signOut();
     };
 
-    console.log(accessToken)
-
     // Render UI based on login state
     if (user) {
         return (

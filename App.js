@@ -12,6 +12,7 @@ const App = () => {
         const params = new URLSearchParams(fragment);
         const accessToken = params.get('access_token');
         const refreshToken = params.get('refresh_token');
+        console.log(accessToken)
         if (accessToken && refreshToken) {
           await supabase.auth.setSession({
             access_token: accessToken,
@@ -22,7 +23,7 @@ const App = () => {
     };
 
     // Listen for deep link events
-    Linking.addEventListener('url', handleUrl);
+    const subscription = Linking.addEventListener('url', handleUrl);
 
     // Handle initial URL if app was opened via deep link
     Linking.getInitialURL().then((url) => {
@@ -33,7 +34,7 @@ const App = () => {
 
     // Cleanup listener
     return () => {
-      Linking.removeEventListener('url', handleUrl);
+      subscription.remove();
     };
   }, []);
 
